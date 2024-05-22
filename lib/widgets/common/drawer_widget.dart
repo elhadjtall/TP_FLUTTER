@@ -12,8 +12,14 @@ class DrawerWidget extends StatelessWidget {
           top: 30,
         ),
         child: const Column(
+          crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
-            CloseButton(),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.end,
+              children: [
+                CloseButton(),
+              ],
+            ),
             ListTile(
               leading: Icon(Icons.person),
               title: Text('Home'),
