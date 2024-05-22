@@ -36,7 +36,7 @@ class _AdsWidgetState extends State<AdsWidget> {
         Image.asset('assets/img/ad1.jpeg'),
         const Text('Informatique'),
         Image.asset('assets/img/ad2.jpeg'),
-        const Text('Smarttphone et Objet'),
+        const Text('Smartphone et Objet'),
         Image.asset('assets/img/ad3.jpeg'),
         const Text('TV, Video et HomeCineman  '),
       ],
