@@ -1,8 +1,9 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 
 class AdsWidget extends StatefulWidget {
-  const AdsWidget({super.key});
-
+  AdsWidget({super.key});
 
 // dart :
 // List : équivalent à un array indice
@@ -12,6 +13,17 @@ class AdsWidget extends StatefulWidget {
 // Pas de protected
 // Préfixe _ : équivalent à private
 
+// Liste des Map
+  final List<Map> _items = [
+    {'img': 'ad1.jpg', 'text': 'Text 1'},
+    {'img': 'ad2.jpg', 'text': 'Text 2'},
+    {'img': 'ad3.jpg', 'text': 'Text 3'},
+  ];
+// Indice de la liste
+  final int _index = 0;
+
+// muniteur
+  Timer? _timer;
   @override
   State<AdsWidget> createState() => _AdsWidgetState();
 }
