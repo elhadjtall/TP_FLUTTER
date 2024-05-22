@@ -11,8 +11,21 @@ class AppBarWidget extends StatelessWidget implements PreferredSizeWidget {
         style: TextStyle(
           // color: colors.deepOrange,
           color: Color.fromRGBO(255, 0, 255, 1),
+          fontSize: 20,
+          fontFamily: 'Rubik',
         ),
       ),
+      // On ajout des icons a la barre d'AppBar
+      actions: [
+        IconButton(
+          onPressed: () {},
+          icon: const Icon(Icons.search),
+        ),
+        IconButton(
+          onPressed: () {},
+          icon: const Icon(Icons.shopping_cart),
+        ),
+      ],
       centerTitle: true,
     );
   }
