@@ -8,11 +8,15 @@ class DrawerWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Drawer(
       child: Container(
+        padding: const EdgeInsets.only(
+          top: 30,
+        ),
         child: const Column(
           children: [
+            CloseButton(),
             ListTile(
               leading: Icon(Icons.person),
-              title: Text('Profile'),
+              title: Text('Home'),
             )
           ],
         ),
