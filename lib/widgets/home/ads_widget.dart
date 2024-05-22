@@ -45,8 +45,14 @@ class _AdsWidgetState extends State<AdsWidget> {
 
   void _setTimer(Timer timer) {
     setState(() {
+      // Creer une condition timer
+      if (widget._index < widget._items.length - 1) {
+        widget._index++;
+      } else {
+        widget._index = 0;
+      }
       // Changement de l'index (% : signifit modulo)
-      widget._index = (widget._index + 1) % widget._items.length;
+      // widget._index = (widget._index + 1) % widget._items.length;
     });
     print('timer');
   }
@@ -54,8 +60,10 @@ class _AdsWidgetState extends State<AdsWidget> {
   // C'est le widget qui s'affiche pas
   @override
   void dispose() {
-    widget._timer?.cancel();
     super.dispose();
+
+    // Stop le timer
+    widget._timer!.cancel();
   }
 
   @override
