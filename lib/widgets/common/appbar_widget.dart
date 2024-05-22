@@ -19,7 +19,7 @@ class AppBarWidget extends StatelessWidget implements PreferredSizeWidget {
       actions: [
         IconButton(
           onPressed: () {},
-          icon: const Icon(Icons.search),
+          icon: const Icon(Icons.person),
         ),
         IconButton(
           onPressed: () {},
