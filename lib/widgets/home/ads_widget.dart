@@ -15,9 +15,9 @@ class AdsWidget extends StatefulWidget {
 
 // Liste des Map
   final List<Map> _items = [
-    {'img': 'ad1.jpg', 'text': 'Text 1'},
-    {'img': 'ad2.jpg', 'text': 'Text 2'},
-    {'img': 'ad3.jpg', 'text': 'Text 3'},
+    {'img': 'ad1.jpeg', 'text': 'Text 1'},
+    {'img': 'ad2.jpeg', 'text': 'Text 2'},
+    {'img': 'ad3.jpeg', 'text': 'Text 3'},
   ];
 // Indice de la liste
   final int _index = 0;
@@ -31,6 +31,10 @@ class AdsWidget extends StatefulWidget {
 class _AdsWidgetState extends State<AdsWidget> {
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return Column(
+      children: [
+        Image.asset('assets/img/ad1.jpeg'),
+      ],
+    );
   }
 }
