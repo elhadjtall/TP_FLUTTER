@@ -33,12 +33,16 @@ class _AdsWidgetState extends State<AdsWidget> {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        Image.asset('assets/img/ad1.jpeg'),
-        const Text('Informatique'),
-        Image.asset('assets/img/ad2.jpeg'),
-        const Text('Smartphone et Objet'),
-        Image.asset('assets/img/ad3.jpeg'),
-        const Text('TV, Video et HomeCineman  '),
+        //Le mot-clé widget permet d'acceder à la classe parente widget à partir de la classe de l'état du widget
+        // On ajoute le $ pour concatener les variables
+        Image.asset('assets/img/${widget._items[widget._index]['img']}'),
+        Text(
+            '${widget._items[widget._index]['text']}') // Image.asset('assets/img/ad1.jpeg'),
+        // const Text('Informatique'),
+        // Image.asset('assets/img/ad2.jpeg'),
+        // const Text('Smartphone et Objet'),
+        // Image.asset('assets/img/ad3.jpeg'),
+        // const Text('TV, Video et HomeCineman  '),
       ],
     );
   }
