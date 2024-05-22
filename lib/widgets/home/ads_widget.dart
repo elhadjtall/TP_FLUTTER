@@ -20,7 +20,7 @@ class AdsWidget extends StatefulWidget {
     {'img': 'ad3.jpeg', 'text': 'Text 3'},
   ];
 // Indice de la liste
-  final int _index = 0;
+  int _index = 0;
 
 // muniteur
   Timer? _timer;
@@ -28,7 +28,36 @@ class AdsWidget extends StatefulWidget {
   State<AdsWidget> createState() => _AdsWidgetState();
 }
 
+/*
+
+Cycle de vie d'un widget 
+initState : affichage du widget
+dispose : désaffichage du widget
+
+*/
 class _AdsWidgetState extends State<AdsWidget> {
+  @override
+  void initState() {
+    super.initState();
+    // Déclencher le timer
+    widget._timer = Timer.periodic(const Duration(seconds: 2), _setTimer);
+  }
+
+  void _setTimer(Timer timer) {
+    setState(() {
+      // Changement de l'index (% : signifit modulo)
+      widget._index = (widget._index + 1) % widget._items.length;
+    });
+    print('timer');
+  }
+
+  // C'est le widget qui s'affiche pas
+  @override
+  void dispose() {
+    widget._timer?.cancel();
+    super.dispose();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Column(
