@@ -2,6 +2,7 @@
 // bibliothèque material : bibliothèque de design de google
 import 'package:flutter/material.dart';
 import 'package:store/screens/home_screen.dart';
+import 'package:store/services/router_service.dart';
 
 // fonction main : point d'entrée de l'application
 void main() => runApp(const Store());
@@ -29,10 +30,11 @@ class Store extends StatelessWidget {
   */
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp.router(
       debugShowCheckedModeBanner: false,
       title: "Store",
-      home: HomeScreen(),
+      // home: HomeScreen(),
+      routerConfig: RouterService.getRouter(),
     );
   }
 }
