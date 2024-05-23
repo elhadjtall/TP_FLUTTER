@@ -21,9 +21,9 @@ class DrawerWidget extends StatelessWidget {
               ],
             ),
             ListTile(
-              leading: Icon(Icons.person),
+              leading: Icon(Icons.home),
               title: Text('Home'),
-            )
+            ),
           ],
         ),
       ),

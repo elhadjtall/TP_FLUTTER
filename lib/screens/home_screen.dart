@@ -19,7 +19,7 @@ class HomeScreen extends StatelessWidget {
           children: [
             AdsWidget(),
             // Appelation de la classe ProductsGridWidget
-            const ProductsGridWidget(),
+            ProductsGridWidget(),
             // Correction des parenthèses en crochets pour 'children'
           ],
         ),
