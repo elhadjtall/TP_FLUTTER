@@ -1,4 +1,4 @@
 class Config {
   // COnst : constante
-  static const API_URL = 'http://fakestoreapi.com/products';
+  static const API_URL = 'http://fakestoreapi.com';
 }

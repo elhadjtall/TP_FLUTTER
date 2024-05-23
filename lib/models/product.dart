@@ -6,7 +6,6 @@ class Product {
   required : paramètre obligatoire
   */
   int id;
-  String name;
   String title, description, category, image;
   num price;
   Map rating;
@@ -14,7 +13,6 @@ class Product {
   // Creer le constructeur par defaut
   Product(
       {required this.id,
-      required this.name,
       required this.title,
       required this.description,
       required this.category,
