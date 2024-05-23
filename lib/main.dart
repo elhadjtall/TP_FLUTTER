@@ -1,11 +1,22 @@
 // import des packages
 // bibliothèque material : bibliothèque de design de google
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+import 'package:store/providers/product_provider.dart';
 import 'package:store/screens/home_screen.dart';
 import 'package:store/services/router_service.dart';
 
 // fonction main : point d'entrée de l'application
-void main() => runApp(const Store());
+void main() => runApp(
+        // Recupcuper notre priveder
+        MultiProvider(
+      providers: [
+        ChangeNotifierProvider(
+          create: (context) => ProductProvider(),
+        )
+      ],
+      child: const Store(),
+    ));
 
 // widget (composant) Store : représente l'application
 class Store extends StatelessWidget {
