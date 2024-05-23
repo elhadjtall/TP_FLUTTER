@@ -22,6 +22,7 @@ class ProductsGridWidget extends StatelessWidget {
             inspect(data);
             // Return un grid builder pour afficher les données
             return GridView.builder(
+              //Ajout de ces deux propriété pour afficher les numéros des lignes et colonnes
               shrinkWrap: true, // La taille ou la hauteur du contenu
               itemCount: data.length, // La longueur du contenu 
               gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
