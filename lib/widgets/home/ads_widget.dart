@@ -54,7 +54,7 @@ class _AdsWidgetState extends State<AdsWidget> {
       // Changement de l'index (% : signifit modulo)
       // widget._index = (widget._index + 1) % widget._items.length;
     });
-    print('timer');
+    // print('timer');
   }
 
   // C'est le widget qui s'affiche pas
