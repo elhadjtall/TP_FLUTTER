@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:store/models/product.dart';
 
 class ProductItemGrid extends StatelessWidget {
@@ -15,14 +16,21 @@ class ProductItemGrid extends StatelessWidget {
       // Afficher le titre du produit
       Text(
         product.title,
-        overflow: TextOverflow.ellipsis,
         maxLines: 2,
+        overflow: TextOverflow.ellipsis,
       ),
       // Afficher le prix du produit
       Text('${product.price}€'),
       // Le boutton pour voir les details
       OutlinedButton(
-        onPressed: () {},
+        onPressed: () {
+          /*
+          navigeur vers un écran 
+          context : écran en cours d'affichage
+
+          */
+          context.pushNamed('product-detail'); // 'product-detail' : nom de l'écran
+        },
 
         style: OutlinedButton.styleFrom(
           // Le fond du bouton
