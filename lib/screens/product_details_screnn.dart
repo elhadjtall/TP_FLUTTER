@@ -10,7 +10,9 @@ class ProductDetailsScrenn extends StatelessWidget {
   Widget build(BuildContext context) {
     return const Scaffold(
       appBar: AppBarWidget(),
-      drawer: DrawerWidget(),
+
+      // Si l'ecran est superposé, si le drawer n'est présent une flèche de retour s'affiche en haut à droite
+      //drawer: DrawerWidget(),
       body: SingleChildScrollView(
         // Correction de 'SimgleChildScrollView' en 'SingleChildScrollView'
         child: Column(
