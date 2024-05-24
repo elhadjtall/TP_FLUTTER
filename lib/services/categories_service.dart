@@ -21,10 +21,7 @@ class CategoriesService {
     if (response.statusCode == 200) {
       // convertir les donnée en Json
       List data = jsonDecode(response.body);
-
-      return data
-          .map((dynamic value) => Category(name: value['name']))
-          .toList();
+      return data.map((dynamic value) => Category(name: value)).toList();
     } else {
       throw Error();
     }

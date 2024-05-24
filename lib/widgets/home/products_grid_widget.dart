@@ -12,7 +12,7 @@ class ProductsGridWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    inspect(_productsService.getProducts());
+    // inspect(_productsService.getProducts());
 
     // Creer un container pour mettre du margin et du padding
     return Container(
@@ -24,7 +24,7 @@ class ProductsGridWidget extends StatelessWidget {
             if (snapshot.hasData) {
               // requireData : recuperer les données à l'interieur
               List<Product> data = snapshot.requireData;
-              inspect(data);
+              // inspect(data);
               // Return un grid builder pour afficher les données
               return Column(
                 children: [
