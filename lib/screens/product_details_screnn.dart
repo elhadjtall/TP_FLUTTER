@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:store/widgets/common/appbar_widget.dart';
-import 'package:store/widgets/common/drawer_widget.dart';
+// import 'package:store/widgets/common/drawer_widget.dart';
+import 'package:store/widgets/product-details/product_details_widget.dart';
 
 class ProductDetailsScrenn extends StatelessWidget {
   const ProductDetailsScrenn(
@@ -19,7 +20,9 @@ class ProductDetailsScrenn extends StatelessWidget {
           // Correction de 'Colum' en 'Column'
           children: [
             // Affichage des texts des produits
-            Text("product details"),
+            // Text("product details"),
+            // On ajoute le widget dans l'ecran
+            ProductDetailsWidget(),
           ],
         ),
       ),

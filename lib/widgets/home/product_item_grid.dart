@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import 'package:provider/provider.dart';
 import 'package:store/models/product.dart';
+import 'package:store/providers/product_provider.dart';
 
 class ProductItemGrid extends StatelessWidget {
   // Recuperer les informations du produit par la grille
@@ -24,12 +26,15 @@ class ProductItemGrid extends StatelessWidget {
       // Le boutton pour voir les details
       OutlinedButton(
         onPressed: () {
+          // mettee à jour la propriété product de ProductProvider
+          context.read<ProductProvider>().product = product;
           /*
           navigeur vers un écran 
           context : écran en cours d'affichage
 
           */
-          context.pushNamed('product-detail'); // 'product-detail' : nom de l'écran
+          context
+              .pushNamed('product-detail'); // 'product-detail' : nom de l'écran
         },
 
         style: OutlinedButton.styleFrom(
