@@ -28,10 +28,10 @@ class DrawerWidget extends StatelessWidget {
               title: Text('Home'),
             ),
             ListTile(
-              leading : icon(Icons.list_alt),
-              title : Text('Category'),
-              selected : true,
-            )
+              leading: Icon(Icons.list_alt),
+              title: Text('Category'),
+              selected: true,
+            ),
           ],
         ),
       ),
