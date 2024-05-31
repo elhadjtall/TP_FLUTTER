@@ -27,6 +27,11 @@ class DrawerWidget extends StatelessWidget {
               leading: Icon(Icons.home),
               title: Text('Home'),
             ),
+            ListTile(
+              leading : icon(Icons.list_alt),
+              title : Text('Category'),
+              selected : true,
+            )
           ],
         ),
       ),
